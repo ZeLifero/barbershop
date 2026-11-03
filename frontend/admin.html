@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Панель администратора — Gentlemen's Club</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"></head>
+<body class="admin-body">
+<header class="admin-top"><a class="brand" href="index.html"><span class="brand-mark">G<span>C</span></span><span class="brand-name">GENTLEMEN'S <small>ADMINISTRATION</small></span></a><a href="index.html" class="text-link">← На сайт</a></header>
+<main class="admin-wrap">
+  <section class="admin-login" id="loginPanel"><p class="eyebrow">GENTLEMEN'S CLUB · PRIVATE</p><h1>Панель <em>управления.</em></h1><p>Демонстрационный вход в интерфейс администратора.</p><form id="loginForm"><label>Пароль<input id="adminPassword" type="password" placeholder="Введите пароль" required></label><button class="btn btn-dark" type="submit">Войти <span>↗</span></button><small>Демо-пароль: <b>club2026</b></small><p class="form-message" id="loginMessage"></p></form></section>
+  <section class="dashboard hidden" id="dashboard">
+    <div class="dashboard-heading"><div><p class="eyebrow">OVERVIEW · 2026</p><h1>Добро пожаловать.</h1><p>Здесь будут отображаться заявки клиентов.</p></div><button class="btn btn-outline" id="logoutBtn">Выйти</button></div>
+    <div class="dash-stats"><div><span>ВСЕГО ЗАЯВОК</span><strong id="totalCount">0</strong></div><div><span>ОЖИДАЮТ ПОДТВЕРЖДЕНИЯ</span><strong id="pendingCount">0</strong></div><div><span>СЕГОДНЯ</span><strong id="todayCount">0</strong></div></div>
+    <div class="table-heading"><h2>Заявки на запись</h2><button class="text-link" id="clearBookings">Очистить демо-данные</button></div>
+    <div class="table-scroll"><table><thead><tr><th>Клиент</th><th>Телефон</th><th>Услуга</th><th>Мастер</th><th>Дата и время</th><th>Статус</th><th></th></tr></thead><tbody id="bookingRows"></tbody></table></div>
+    <p class="admin-hint">Это демонстрационная панель. Данные хранятся в localStorage текущего браузера и не являются защищёнными. Подключим авторизацию и PostgreSQL на backend-этапе.</p>
+  </section>
+</main><script src="js/admin.js"></script></body></html>

@@ -1,0 +1,13 @@
+{
+  "name": "gentlemens-club-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Frontend prototype for Gentlemen's Club barbershop",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
