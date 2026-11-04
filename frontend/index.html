@@ -91,12 +91,26 @@
           <div class="form-title"><span>ЗАПОЛНИТЕ ФОРМУ</span><span>01 / 02</span></div>
           <label>Ваше имя<input name="name" type="text" placeholder="Например, Андрей" required minlength="2"></label>
           <label>Номер телефона<input name="phone" type="tel" placeholder="+375 (__) ___-__-__" required></label>
-          <div class="form-row"><label>Услуга<select name="service" required><option value="">Выберите услугу</option><option>Мужская стрижка</option><option>Стрижка машинкой</option><option>Моделирование бороды</option><option>Стрижка + борода</option><option>Королевское бритьё</option></select></label><label>Мастер<select name="master"><option>Любой мастер</option><option>Александр</option><option>Максим</option><option>Даниил</option></select></label></div>
+          <div class="form-row">
+          <label>
+          Услуга
+          <select name="service" required>
+          <option value="">Загрузка услуг...</option>
+          </select>
+          </label>
+
+          <label>
+          Мастер
+          <select name="master" required>
+          <option value="">Загрузка мастеров...</option>
+          </select>
+          </label>
+          </div>
           <div class="form-row"><label>Дата<input name="date" id="bookingDate" type="date" required></label><label>Время<select name="time" required><option value="">Выберите время</option><option>10:00</option><option>11:00</option><option>12:00</option><option>13:00</option><option>14:00</option><option>15:00</option><option>16:00</option><option>17:00</option><option>18:00</option><option>19:00</option><option>20:00</option></select></label></div>
           <label class="consent"><input type="checkbox" required> Я согласен на обработку персональных данных</label>
           <button class="btn btn-dark btn-submit" type="submit">Отправить заявку <span>↗</span></button>
           <p class="form-message" id="formMessage" role="status"></p>
-          <small class="form-disclaimer">Демонстрационная форма: до подключения backend заявки сохраняются только в браузере.</small>
+         <small class="form-disclaimer"> После отправки заявка сохраняется в базе данных Gentlemen's Club.</small>
         </form>
       </div>
     </section>
