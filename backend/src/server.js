@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import prisma from "./lib/prisma.js";
 
 import healthRoutes from "./routes/health.routes.js";
 import servicesRoutes from "./routes/services.routes.js";
@@ -39,6 +40,14 @@ app.use((err, req, res, next) => {
         message: "Внутренняя ошибка сервера"
     });
 });
+
+prisma.$connect()
+    .then(() => {
+        console.log("PostgreSQL connected successfully!");
+    })
+    .catch((error) => {
+        console.error("Database connection failed:", error);
+    });
 
 // Start server
 app.listen(PORT, () => {
